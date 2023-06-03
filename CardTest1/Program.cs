@@ -1,6 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-using CardTest1;
+﻿//foreach (Card card in Deck.DeckOfCards()) {
+//	Console.WriteLine(card);
+//}
 
-foreach (Card card in Deck.DeckOfCards()) {
+List<Card> shuffledDeck = Deck.ShuffledDeck(Deck.DeckOfCards()).ToList();
+
+foreach (Card card in shuffledDeck) {
 	Console.WriteLine(card);
 }
+Console.WriteLine($"Count: {shuffledDeck.Count}");
